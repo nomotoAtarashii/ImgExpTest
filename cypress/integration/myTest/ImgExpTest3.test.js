@@ -14,11 +14,11 @@ describe('Sprint 3 Test', () => {
         
         // CHECK RESULTS
         // Check that the current page is still the userLogin page
-        //cy.url().should('include', '/userLogin')
-        //cy.url().should('eq', 'http://imgexp.herokuapp.com/userLogin')
+        cy.url().should('include', '/userLogin')
+        cy.url().should('eq', 'http://imgexp.herokuapp.com/userLogin')
         // Check that error message is being output
-        //cy.contains('Email is required').should('exist')
-        //cy.contains('Password is required').should('exist')
+        cy.contains('Email is required').should('exist')
+        cy.contains('Password is required').should('exist')
         
     })
 

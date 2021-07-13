@@ -19,6 +19,7 @@ describe('Sprint 3 Test', () => {
         // Check that error message is being output
         cy.contains('Email is required').should('exist')
         cy.contains('Password is required').should('exist')
+        cy.contains('Test Commit').should('not.exist')
         
     })
 

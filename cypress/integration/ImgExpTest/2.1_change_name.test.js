@@ -34,13 +34,14 @@ describe('Change Name Test', () => {
 
     })
 
-    it('change_name_2 - Cannot save without input', () => {
+    it('change_name_02 - Cannot save without input', () => {
         // click dropdown arrow
         cy.get('body > app-root > app-home > app-header > div > header > div.btn-group.drop-menu.btn-sm.ng-star-inserted.dropdown > button > i').click()
         // Click settings
         cy.get('body > app-root > app-home > app-header > div > header > div.btn-group.drop-menu.btn-sm.ng-star-inserted.show.dropdown > ul > li:nth-child(1) > a').click()
 
         // Not input username and click save
+        cy.wait(1500)
         cy.get('#saveBtn').click({ force: true })
         cy.wait(1500)
 

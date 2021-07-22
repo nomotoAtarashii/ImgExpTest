@@ -112,29 +112,6 @@ describe('Sign Up Test', () =>{
         cy.contains('Password is at least 6 characters').should('exist')
     })
 
-    // Verify that your password can contain only alphanumeric, upper case, lowercase, undercore(_) and dash(-)
-    it.skip('sign_up_06 - Check valid sign up with verification', () => {
-        // STEPS TO DO
-        // Visit the imgexp site
-        cy.visit('http://imgexp.herokuapp.com')
-        // Click Sign-in button
-        cy.get('body > app-root > app-home > app-header > div > header > a.btn.btn-danger.rounded-pill.sign-in').click()
-        // Enter the fields
-        // Password must ONLY alphanumeric, upper case, lowercase, undercore(_) and dash(-)
-        cy.get('#signUpEmail').type('beced28257@ovooovo.com')
-        cy.get('#signUpPassword').type('thinh_Thinh-1234')
-        cy.get('#signUpRepassword').type('thinh_Thinh-1234', {force:true})
-        // Click SIGN UP button to submit
-        cy.get('#signUpSubmit').click({force:true})
-
-        // CHECK RESULTS
-        // Check that error message is NOT being output
-        cy.contains('Password is invalid').should('not.exist', {setTimeout: 600000})
-        // Check that the current page is NOT the userLogin page
-        cy.url().should('not.include', '/userLogin')
-        cy.url().should('not.eq', 'http://imgexp.herokuapp.com/userLogin')        
-    })
-
     it('sign_up_07 - Verify that your password can contain only alphanumeric, upper case, lowercase, undercore(_) and dash(-)', () => {
         //STEPS TO DO 
         //Visit the imgexp site

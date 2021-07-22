@@ -42,6 +42,8 @@ describe('Change Name Test', () => {
 
         // Not input username and click save
         cy.wait(1500)
+        // change name without input
+        cy.get('#username').click({ force: true })
         cy.get('#saveBtn').click({ force: true })
         cy.wait(1500)
 
